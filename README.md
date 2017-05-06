@@ -1,2 +1,2 @@
-# MyAppliedGame
-This is an Applied Game using RAGE software assets.
+# MyRageAsset
+This is an Applied Game asset.
