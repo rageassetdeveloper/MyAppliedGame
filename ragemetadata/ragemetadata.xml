@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+This is an example of an RAGE metadata XML file.
+It is used for the RAGE KM EP GitHub integration developed by Arvid 
+Zimmermann (Fernuniversität Hagen) for his bachelor thesis in 2017.
+
+Metadata from this file will be imported into the RAGE KM EP by the 
+GitHub integration software. This file is expected to be located at
+<[GitHub repo you wish to import]/ragemetadata/ragemetadata.xml>.
+-->
+<rage:Asset
+    xmlns:dcterms="http://purl.org/dc/terms/"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:foaf="http://xmlns.com/foaf/0.1/"
+    xmlns:dc="http://purl.org/dc/elements/1.1/"
+    xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+    xmlns:sch="http://purl.oclc.org/dsdl/schematron"
+    xmlns:rage="http://rageproject.eu/2015/asset/"
+    xmlns:adms="http://www.w3.org/ns/adms#"
+    xmlns:dcat="http://www.w3.org/ns/dcat#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://rageproject.eu/2015/asset/ file:DefaultProfile.xsd" name="TextToSpeechAsset">
+
+    <dcterms:title xml:lang="en">Text to Speech Asset</dcterms:title>
+    <dcterms:title xml:lang="de">Sprachsynthese</dcterms:title>
+    <dcterms:title xml:lang="fr">Synthèse Vocale Actif</dcterms:title>
+    <dcterms:title xml:lang="it">Testo a voce patrimonale</dcterms:title>
+
+    <dcterms:description xml:lang="en">An asset generating speech output from plain text</dcterms:description>
+    <dcterms:description xml:lang="de">Ein Asset, das Sprachausgabe aus Text generiert</dcterms:description>
+
+    <dcterms:type rdf:resource="http://rageproject.eu/skos/asset_type#text_to_spech_asset"/>
+
+    <dcterms:date>2014-05-28</dcterms:date>
+
+    <dcterms:language xml:lang="en">en</dcterms:language>
+    <dcterms:language xml:lang="de">de</dcterms:language>
+
+    <dcterms:creator>
+        <foaf:Organization>
+            <foaf:name>Game Asset Company Ltd.</foaf:name>
+            <foaf:mbox rdf:resource="mailto:info@gameasset.com"/>
+            <foaf:homepage rdf:resource="http://www.gameasset.com"/>
+        </foaf:Organization>
+    </dcterms:creator>
+
+    <dcterms:creator>
+        <foaf:Person>
+            <foaf:name>John Smith</foaf:name>
+            <foaf:mbox rdf:resource="mailto:john.smith@gameasset.com"/>
+        </foaf:Person>
+    </dcterms:creator>
+
+    <dcterms:creator>
+        <foaf:Person>
+            <foaf:name>Ellen Miller</foaf:name>
+            <foaf:mbox rdf:resource="mailto:ellen.miller@gameasset.com"/>
+            <foaf:homepage rdf:resource="http://www.gameasset.com/~miller/"/>
+        </foaf:Person>
+    </dcterms:creator>
+
+    <dcterms:creator>
+        <foaf:Person>
+            <foaf:name>Sammy Nohomepage</foaf:name>
+            <foaf:mbox rdf:resource="mailto:sammy.nohomepage@gameasset.com"/>
+        </foaf:Person>
+    </dcterms:creator>
+
+    <dcterms:publisher>
+        <foaf:Person>
+            <foaf:name>John Smith</foaf:name>
+            <foaf:mbox rdf:resource="mailto:john.smith@gameasset.com"/>
+            <foaf:homepage rdf:resource="http://www.gameasset.com/~smith/"/>
+        </foaf:Person>
+    </dcterms:publisher>
+
+    <dcterms:creator>
+        <foaf:Organization>
+            <foaf:name>ACME Ltd.</foaf:name>
+            <foaf:mbox rdf:resource="mailto:info@ac.me"/>
+            <foaf:homepage rdf:resource="http://ac.me"/>
+        </foaf:Organization>
+    </dcterms:creator>
+
+    <rage:owner>
+        <foaf:Organization>
+            <foaf:name>Game Asset Company Ltd.</foaf:name>
+            <foaf:mbox rdf:resource="mailto:info@gameasset.com"/>
+            <foaf:homepage rdf:resource="http://www.gameasset.com"/>
+        </foaf:Organization>
+    </rage:owner>
+
+    <dcat:accessURL rdf:resource="http://www.gameasset.com/solutions/texttospeechasset.html"/>
+	
+    <dcat:keyword xml:lang="en">text to speech</dcat:keyword>
+    <dcat:keyword xml:lang="en">speech generation</dcat:keyword>
+    <dcat:keyword xml:lang="en">voice</dcat:keyword>
+
+    <rage:versionInfo>2.3</rage:versionInfo>
+
+    <adms:versionNotes xml:lang="en">This version 2.3 fixes some security issues.</adms:versionNotes>
+
+    <adms:status rdf:resource="http://purl.org/adms/status/Completed"/>
+
+    <rage:CustomMetadata>
+        <rage:name>CustomAttribute1</rage:name>
+        <rage:value>Custom value 1</rage:value>
+    </rage:CustomMetadata>
+
+    <rage:CustomMetadata>
+        <rage:name>CustomAttribute2</rage:name>
+        <rage:value>Custom value 2</rage:value>
+    </rage:CustomMetadata>
+
+    <rage:RelatedAsset name="TextToSpeechAsset" minVersion="2.2" maxVersion="2.2">
+        <dcterms:description xml:lang="en">Previous version</dcterms:description>
+        <rage:relationType>prevVersion</rage:relationType>
+        <dcat:accessURL rdf:resource="http://www.gameasset.com/solutions/texttospeechasset.html"/>
+    </rage:RelatedAsset>
+
+    <rage:RelatedAsset name="VoiceSynthezizer" minVersion="1.2" maxVersion="1.8">
+        <dcterms:description xml:lang="en">VoiceSynthezizer version 1.2-1.8 is required.</dcterms:description>
+        <rage:relationType>requires</rage:relationType>
+		<dcat:accessURL rdf:resource="http://www.gameasset.com/solutions/voicesynthezizer.html"/>
+    </rage:RelatedAsset>
+
+    <rage:Classification>
+        <dcterms:description xml:lang="en">Classification of the asset</dcterms:description>
+        <rage:Context name="Knowledge Transfer">
+            <dcterms:title xml:lang="en">Knowledge Transfer</dcterms:title>
+            <dcterms:title xml:lang="de">Wissenstransfer</dcterms:title>
+            <dcterms:description xml:lang="en">Classification of the asset according the knowledge transfer</dcterms:description>
+            <dcterms:description xml:lang="de">Klassifikation des Assets - Wissenstransfer</dcterms:description>
+            <dcat:themeTaxonomy rdf:resource="http://rageproject.eu/taxonomy/knowldg-transfer#knowldg-transfer"/>
+            <dcat:theme rdf:resource="http://rageproject.eu/taxonomy/knowldg-transfer#abilt-learn"/>
+            <dcat:theme rdf:resource="http://rageproject.eu/taxonomy/knowldg-transfer#applying-concpts"/>
+            <dcat:theme rdf:resource="http://rageproject.eu/taxonomy/knowldg-transfer#rules"/>
+        </rage:Context>
+    </rage:Classification>
+
+    <rage:Solution>
+        <dcterms:description xml:lang="en">Solution of the asset is as follows: Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.</dcterms:description>
+        <rage:Requirements>
+            <dcterms:description xml:lang="en">Requirements</dcterms:description>
+        </rage:Requirements>
+        <rage:Design>
+            <dcterms:description xml:lang="en">Design</dcterms:description>
+        </rage:Design>
+        <rage:Implementation>
+            <dcterms:description xml:lang="en">Implementation of the asset is best described as follows: Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics.</dcterms:description>
+            <rage:gameEngine rdf:resource="http://rageproject.eu/skos/gameEngine#Unity"/>
+            <rage:gamePlatform rdf:resource="http://rageproject.eu/skos/gamePlatform#Web"/>
+            <rage:gamePlatform rdf:resource="http://rageproject.eu/skos/gamePlatform#Desktop"/>
+            <rage:progLanguage rdf:resource="http://rageproject.eu/skos/progLanguage#CSharp"/>
+            <rage:progLanguage rdf:resource="http://rageproject.eu/skos/progLanguage#Java"/>
+            <rage:CustomMetadata>
+                <rage:name>voiceOption</rage:name>
+                <rage:value>male</rage:value>
+            </rage:CustomMetadata>
+            <rage:CustomMetadata>
+                <rage:name>voiceOption</rage:name>
+                <rage:value>female</rage:value>
+            </rage:CustomMetadata>
+            <rage:Artefact name="text2speech.cs">
+                <rage:reference>source/text2speech.cs</rage:reference>
+                <dcterms:title xml:lang="en">text2speech.cs</dcterms:title>
+                <dcterms:format rdf:resource="text/plain"/>
+            </rage:Artefact>
+            <rage:Artefact name="textAnalisys.cs">
+                <rage:reference>source/textAnalisys.cs</rage:reference>
+                <dcterms:title xml:lang="en">textAnalisys.cs</dcterms:title>
+                <dcterms:format rdf:resource="text/plain"/>
+            </rage:Artefact>
+            <rage:Artefact name="speechGeneration.cs">
+                <rage:reference>source/speechGeneration.cs</rage:reference>
+                <dcterms:title xml:lang="en">speechGeneration.cs</dcterms:title>
+                <dcterms:format rdf:resource="text/plain"/>
+            </rage:Artefact>
+        </rage:Implementation>
+        <rage:Tests>
+            <dcterms:description xml:lang="en">Tests</dcterms:description>
+        </rage:Tests>
+    </rage:Solution>
+
+    <rage:Usage>
+        <dcterms:description xml:lang="en">Usage</dcterms:description>
+        <rage:Artefact name="documentation.pdf">
+            <rage:reference>docs/documentation.pdf</rage:reference>
+            <dcterms:title xml:lang="en">documentation.pdf</dcterms:title>
+            <dcterms:description xml:lang="en">Documentation of the asset</dcterms:description>
+            <dcterms:type rdf:resource="http://rageproject.eu/skos/artefactType#Documentation"/>
+            <dcterms:date>2014-05-10</dcterms:date>
+            <dcterms:creator>
+                <foaf:Person>
+                    <foaf:name>John Smith</foaf:name>
+                    <foaf:mbox rdf:resource="mailto:john.smith@gameasset.com"/>
+                    <foaf:homepage rdf:resource="http://www.gameasset.com/~smith/"/>
+                </foaf:Person>
+            </dcterms:creator>
+            <rage:versionInfo>2.3</rage:versionInfo>
+            <dcterms:format rdf:resource="application/pdf"/>
+        </rage:Artefact>
+    </rage:Usage>
+
+    <rage:License>
+        <dcterms:title xml:lang="en">License</dcterms:title>
+        <dcterms:description xml:lang="en">License of using the asset</dcterms:description>
+        <dcterms:type rdf:resource="http://rageproject.eu/skos/licenseType#MITLicense"/>
+        <dcat:accessURL rdf:resource="http://www.gameasset.com/license.txt"/>
+    </rage:License>
+</rage:Asset>
